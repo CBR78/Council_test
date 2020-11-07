@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@XmlRootElement(name = "product")
+@XmlRootElement(name = "productkkkkk")
 @XmlAccessorType(XmlAccessType.NONE)
 public class Product {
 

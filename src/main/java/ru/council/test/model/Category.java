@@ -3,9 +3,9 @@ package ru.council.test.model;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlID;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlValue;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @XmlRootElement(name = "category")
-@XmlAccessorType(XmlAccessType.NONE)
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Category {
 
     @XmlAttribute
@@ -25,6 +25,6 @@ public class Category {
     @XmlAttribute
     private String parentId;
 
-    @XmlElement
-    private String category;
+    @XmlValue
+    private String name;
 }
