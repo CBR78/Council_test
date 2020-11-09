@@ -13,12 +13,11 @@ import ru.council.test.service.DcCatalogService;
 public class AutoLoadXml {
     private static final String URL = "http://frontend.tanuki.ru/feeds/raiden-delivery-club/";
     @Autowired
-    RestTemplate restTemplate;
-    @Autowired
     DcCatalogService dcCatalogService;
 
     @PostConstruct
     public void loadXml() {
+        RestTemplate restTemplate = new RestTemplate();
         DcCatalog dcCatalog = restTemplate.getForObject(URL, DcCatalog.class);
         dcCatalogService.create(dcCatalog);
     }
