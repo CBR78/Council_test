@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DeliveryService {
 

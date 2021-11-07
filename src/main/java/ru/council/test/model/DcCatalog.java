@@ -17,6 +17,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
 @XmlRootElement(name = "dc_catalog")
 @XmlAccessorType(XmlAccessType.FIELD)
 @Document(indexName = "dc_catalog")

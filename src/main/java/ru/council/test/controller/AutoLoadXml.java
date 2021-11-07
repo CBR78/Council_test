@@ -12,8 +12,12 @@ import ru.council.test.service.DcCatalogService;
 @Component
 public class AutoLoadXml {
     private static final String URL = "http://frontend.tanuki.ru/feeds/raiden-delivery-club/";
+    private final DcCatalogService dcCatalogService;
+
     @Autowired
-    DcCatalogService dcCatalogService;
+    public AutoLoadXml(DcCatalogService dcCatalogService) {
+        this.dcCatalogService = dcCatalogService;
+    }
 
     @PostConstruct
     public void loadXml() {

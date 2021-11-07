@@ -2,18 +2,21 @@ package ru.council.test.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import ru.council.test.model.DcCatalog;
 import ru.council.test.model.DcCatalogList;
 import ru.council.test.repository.DcCatalogRepository;
 
 @Service
 public class DcCatalogService {
-    @Autowired
-    private DcCatalogRepository dcCatalogRepository;
+    private final DcCatalogRepository dcCatalogRepository;
 
-    public DcCatalog create(DcCatalog course) {
-        return dcCatalogRepository.save(course);
+    @Autowired
+    public DcCatalogService(DcCatalogRepository dcCatalogRepository) {
+        this.dcCatalogRepository = dcCatalogRepository;
+    }
+
+    public void create(DcCatalog course) {
+        dcCatalogRepository.save(course);
     }
 
     public DcCatalogList getAll() {

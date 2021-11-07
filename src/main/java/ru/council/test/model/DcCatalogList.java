@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
 @XmlRootElement(name = "dc_catalog_list")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DcCatalogList {
